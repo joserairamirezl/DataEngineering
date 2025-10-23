@@ -1,5 +1,6 @@
-mkdir ~/airflow_lab && cd ~/airflow_lab
-mkdir dags logs plugins
+mkdir $(pwd)/05_Orchestration/airflow/lab/dags $(pwd)/05_Orchestration/airflow/lab/logs $(pwd)/05_Orchestration/airflow/lab/plugins
+
+echo -e "AIRFLOW_UID=$(id -u)" > .env
 
 docker run -d \
   -p 8080:8080 \
